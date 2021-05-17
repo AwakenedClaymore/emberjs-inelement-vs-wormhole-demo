@@ -1,0 +1,39 @@
+{{page-title "RenderState"}}
+<h2>Example 2: Rendering in-place and state caching</h2>
+<br/>
+<div id="ember-wormhole-destination" style="background: lightblue;"/>
+<br/>
+<div id="inElement-destination" style="background: pink;"/>
+<br/>
+<div id="ember-wormhole-destination-second" style="background: green;"/>
+
+<RenderState::InputField
+	@show={{true}}
+  @renderInPlace={{this.renderInPlace}}
+/>
+<br/>
+<EmberWormhole
+	@to={{this.wormholeDestination}}
+  @renderInPlace={{this.renderInPlace}}
+>
+	<div>I'm from ember-wormhole.</div>
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name">
+  <br/>
+  <button {{on "click" this.onClickButton}}>Click Me</button>
+</EmberWormhole>
+
+<br/>
+<button {{on "click" this.onClickRenderInPlace}}>Render InPlace:{{this.renderInPlace}}</button>
+
+<br/>
+<br/>
+<button {{on "click" this.onChangeWormholeDestination}}>Change the wormhole destination: {{this.wormholeDestination}}</button>
+
+{{!--
+  1. in-element has no concept of rendering in-place. If you want to mimic it, you need to create some element they can attach to.
+
+  2. When the destination changes, in-element re-renders everything, so things like input values are gone. Need to manage the state of the component yourself.
+
+ Tip on using in-element: When the destination changes, the contents get re-rendered completely losing any state changes. Any actions or variables you bind to the section persist when destination changes.
+--}}

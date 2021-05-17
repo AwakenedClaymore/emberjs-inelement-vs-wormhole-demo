@@ -1,0 +1,61 @@
+{{page-title "Append"}}
+<h2>Example 3: To append or not to append?</h2>
+<br/>
+
+<div id="ember-wormhole-destination" style="background: lightblue;"/>
+<EmberWormhole
+	@to={{this.wormholeDestination}}
+>
+	<div>I'm from ember-wormhole.</div>
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name">
+  <br/>
+</EmberWormhole>
+
+<br/>
+
+<div id="ember-wormhole-destination-second" style="background: green;">
+	<div style="color:white">I have my own content here</div>
+</div>
+
+<br/>
+
+<div id="inElement-destination" style="background: pink;">
+	<div>Some content here</div>
+</div>
+
+<br/>
+
+<div id="inElement-destination-second" style="background: burlywood;">
+	<div style="color:white">I also have my own content</div>
+</div>
+
+<Append::InputField
+	@show={{this.showDefaultBehavior}}
+/>
+
+<Append::InputField
+	@show={{this.showAppendComponent}}
+  @destinationSelectorId="inElement-destination-second"
+  @appendContent={{true}}
+/>
+
+
+<br/>
+
+
+<button {{on "click" this.onChangeWormholeDestination}}>Change the wormhole destination: {{this.wormholeDestination}}</button>
+<br/>
+<br/>
+
+<button {{on "click" this.showInFeatureDefaultBehavior}}>Toggle to show default behavior of in-feature</button>
+<br/>
+<br/>
+
+<button {{on "click" this.showAppendInput}}>Toggle to show in-element component appending</button>
+<br/>
+<br/>
+
+{{!--
+  By default in-element replaces all the contents of it's destination. If you don't want this behavior you need to add "insertBefore=null". Any other value besides "null" will result in an error.
+--}}

@@ -1,0 +1,33 @@
+{{page-title "ApiDifferences"}}
+<h2>Example 1: API differences</h2>
+<br/>
+<div id="ember-wormhole-destination" />
+<br/>
+<div id="inElement-destination" />
+
+<ApiDifferences::InputField
+	@show={{true}}
+/>
+
+<EmberWormhole
+	@to="ember-wormhole-destination"
+>
+	<div>I'm from ember-wormhole.</div>
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name">
+</EmberWormhole>
+
+{{!-- Alternative destinations - Black Magic --}}
+{{!--  <div id="ember-wormhole-destination" /> --}}
+{{!--  <div id="inElement-destination" /> --}}
+
+{{!--
+
+Things to note:
+1. In-element needs to be within a component to render while ember-wormhole doesn't -- see how it's living in the route
+2. If the destination element is missing, in-element won't render at all but ember wormhole will render inplace
+3. Black magic: If the destination does not exist in the order it renders, in-element won't render which is expected but wormhole does!
+
+ Tip on using in-element: Make sure the destination element is in the dom before attaching your contents.
+
+--}}
