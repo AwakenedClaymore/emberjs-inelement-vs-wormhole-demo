@@ -1,0 +1,16 @@
+{{#if @show}}
+  {{#if @appendContent}}
+    {{!-- Specifying insertBefore will append at the end of the destination element --}}
+    {{#in-element this.destinationElement insertBefore=null}}
+      <div>I'm from in-element. I'm appending into the parent</div>
+      <label for="name2">Name</label>
+      <input type="text" id="name2" name="name2">
+  	{{/in-element}}
+  {{else}}
+ 		{{#in-element this.destinationElement}}
+    	<div>I AM THE ONE AND ONLY HERE -- supposely</div>
+      <label for="name2">Name</label>
+      <input type="text" id="name2" name="name2">
+  	{{/in-element}}
+  {{/if}}
+{{/if}}

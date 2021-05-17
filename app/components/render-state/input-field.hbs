@@ -1,0 +1,17 @@
+{{#if @show}}
+
+ {{!-- Render in place anchor --}}
+	<div id={{this.inPlaceElementId}} />
+
+  {{#in-element this.destinationElement}}
+  	<div>I'm from in-element.</div>
+    <label for="name2">Name</label>
+    <input type="text" id="name2" name="name2">
+    <br/>
+    <button {{on "click" this.onClickButton}}>Click Me</button>
+    {{#if @renderInPlace}}
+    	<br/>
+    	<div style="background: chartreuse;">I'm rendering in place</div>
+    {{/if}}
+  {{/in-element}}
+{{/if}}
