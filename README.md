@@ -2,7 +2,15 @@
 
 This is a demo of how to use in-feature helper and how it compares to ember-wormhole.
 
+<img width="757" alt="Screen Shot 2021-05-16 at 9 43 17 PM" src="https://user-images.githubusercontent.com/3947173/118565971-f2337c00-b727-11eb-8566-459fff67596a.png">
+
+
 You need to have a version of ember 3.20+ in order to use the in-feature helper.
+
+Quick Table Comparison:
+
+
+Checkout my article:
 
 
 ## Prerequisites
