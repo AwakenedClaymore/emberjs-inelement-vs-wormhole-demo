@@ -26,7 +26,7 @@ export default class append extends Controller {
   }
 
 	@action
-	showInFeatureDefaultBehavior() {
+	showInElementDefaultBehavior() {
     this.showDefaultBehavior = !this.showDefaultBehavior;
   }
 }

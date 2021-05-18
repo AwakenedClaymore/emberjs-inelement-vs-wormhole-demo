@@ -1,6 +1,6 @@
 # emberjs-inelement-vs-wormhole-demo
 
-This is a demo of how to use in-feature helper and how it compares to ember-wormhole.
+This is a demo of how to use in-element helper and how it compares to ember-wormhole.
 
 <img width="757" alt="Screen Shot 2021-05-16 at 9 43 17 PM" src="https://user-images.githubusercontent.com/3947173/118565971-f2337c00-b727-11eb-8566-459fff67596a.png">
 
