@@ -13,6 +13,8 @@ Quick Table Comparison:
 
 Checkout my article:
 
+In the app access: http://localhost:4200/example-links to access the examples.
+
 
 ## Prerequisites
 
