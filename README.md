@@ -1,4 +1,4 @@
-# emberjs-inelement-vs-wormhole-demo
+# emberjs: inelement feature vs ember-wormhole demo
 
 This is a demo of how to use in-element helper and how it compares to ember-wormhole.
 
