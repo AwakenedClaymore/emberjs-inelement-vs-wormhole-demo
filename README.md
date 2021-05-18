@@ -8,7 +8,7 @@ This is a demo of how to use in-feature helper and how it compares to ember-worm
 You need to have a version of ember 3.20+ in order to use the in-feature helper.
 
 Quick Table Comparison:
-<img width="1282" alt="Screen Shot 2021-05-17 at 7 43 11 PM" src="https://user-images.githubusercontent.com/3947173/118582430-29b22080-b748-11eb-90d1-34c0e6ec1671.png">
+<img width="1281" alt="Screen Shot 2021-05-17 at 8 28 18 PM" src="https://user-images.githubusercontent.com/3947173/118585783-71d44180-b74e-11eb-954c-bd0fb46679f2.png">
 
 
 Checkout my article:
