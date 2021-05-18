@@ -3,15 +3,14 @@
 <br/>
 <div id="ember-wormhole-destination" style="background: lightblue;"/>
 <br/>
-<div id="inElement-destination" style="background: pink;"/>
 <br/>
 <div id="ember-wormhole-destination-second" style="background: green;"/>
-
-<RenderState::InputField
-	@show={{true}}
-  @renderInPlace={{this.renderInPlace}}
-/>
 <br/>
+<br/>
+<div id="inElement-destination" style="background: pink;"/>
+<br/>
+
+
 <EmberWormhole
 	@to={{this.wormholeDestination}}
   @renderInPlace={{this.renderInPlace}}
@@ -24,16 +23,29 @@
 </EmberWormhole>
 
 <br/>
+<RenderState::InputField
+	@show={{true}}
+  @renderInPlace={{this.renderInPlace}}
+/>
+
+<br/>
 <button {{on "click" this.onClickRenderInPlace}}>Render InPlace:{{this.renderInPlace}}</button>
 
 <br/>
 <br/>
 <button {{on "click" this.onChangeWormholeDestination}}>Change the wormhole destination: {{this.wormholeDestination}}</button>
-
-{{!--
-  1. in-element has no concept of rendering in-place. If you want to mimic it, you need to create some element they can attach to.
-
-  2. When the destination changes, in-element re-renders everything, so things like input values are gone. Need to manage the state of the component yourself.
-
- Tip on using in-element: When the destination changes, the contents get re-rendered completely losing any state changes. Any actions or variables you bind to the section persist when destination changes.
---}}
+<br/>
+<br/>
+<div>
+  <div> As always actions and variables still persist in the content just like the "click me" button. We have a button that causes ember-wormhole and in-element to "render in place". Add some text to both and click on it, what do you see? I also added a "Change wormhole" button if you didn't believe the content reattaches.</div>
+  <h3>Things to Note:</h3>
+  <ol>
+    <li>
+      in-element has no concept of rendering in-place. If you want to mimic it, you need to create some element they can attach to.
+    </li>
+    <li>
+      When the destination changes, in-element re-renders everything, so things like input values are gone. Need to manage the state of the component yourself.
+    </li>
+  </ol>
+  <div>Tip on using in-element: When the destination changes, the contents get re-rendered completely losing any state changes. Any actions or variables you bind to the section persist when destination changes.</div>
+</div>

@@ -21,13 +21,22 @@
 {{!--  <div id="ember-wormhole-destination" /> --}}
 {{!--  <div id="inElement-destination" /> --}}
 
-{{!--
+<div>
+  <p>As you see ember-wormhole binds to the element with id "ember-wormhole-destination"</p>
+  <p>In-Element is used within the input-field component and binds to element with id "inElement-destination"</p>
+  <p>Use the console to inspect and feel free to play around!</p>
+  <h3>Things to note:</h3>
+  <ol>
+    <li>
+      In-element needs to be within a component to render while ember-wormhole doesn't -- see how it's living in the route
+    </li>
+    <li>
+      If the destination element is missing, in-element won't render at all but ember wormhole will render inplace
+    </li>
+    <li>
+      Black magic: If the destination does not exist in the order it renders, in-element won't render which is expected but wormhole does!
+    </li>
+  </ol>
+  <div> Tip on using in-element: Make sure the destination element is in the dom before attaching your contents.</div>
+</div>
 
-Things to note:
-1. In-element needs to be within a component to render while ember-wormhole doesn't -- see how it's living in the route
-2. If the destination element is missing, in-element won't render at all but ember wormhole will render inplace
-3. Black magic: If the destination does not exist in the order it renders, in-element won't render which is expected but wormhole does!
-
- Tip on using in-element: Make sure the destination element is in the dom before attaching your contents.
-
---}}

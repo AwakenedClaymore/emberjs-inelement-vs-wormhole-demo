@@ -3,6 +3,13 @@
 <br/>
 
 <div id="ember-wormhole-destination" style="background: lightblue;"/>
+<br/>
+<br/>
+<div id="ember-wormhole-destination-second" style="background: green;">
+	<div style="color:white">I have my own content here</div>
+</div>
+
+
 <EmberWormhole
 	@to={{this.wormholeDestination}}
 >
@@ -13,17 +20,13 @@
 </EmberWormhole>
 
 <br/>
-
-<div id="ember-wormhole-destination-second" style="background: green;">
-	<div style="color:white">I have my own content here</div>
-</div>
-
 <br/>
 
 <div id="inElement-destination" style="background: pink;">
 	<div>Some content here</div>
 </div>
 
+<br/>
 <br/>
 
 <div id="inElement-destination-second" style="background: burlywood;">
@@ -42,13 +45,13 @@
 
 
 <br/>
-
+<br/>
 
 <button {{on "click" this.onChangeWormholeDestination}}>Change the wormhole destination: {{this.wormholeDestination}}</button>
 <br/>
 <br/>
 
-<button {{on "click" this.showInFeatureDefaultBehavior}}>Toggle to show default behavior of in-feature</button>
+<button {{on "click" this.showInElementDefaultBehavior}}>Toggle to show default behavior of in-element</button>
 <br/>
 <br/>
 
@@ -56,6 +59,8 @@
 <br/>
 <br/>
 
-{{!--
-  By default in-element replaces all the contents of it's destination. If you don't want this behavior you need to add "insertBefore=null". Any other value besides "null" will result in an error.
---}}
+<div>
+  <div>
+    By default in-element replaces all the contents of it's destination. If you don't want this behavior you need to add "insertBefore=null". Any other value besides "null" will result in an error.
+  </div>
+</div>
