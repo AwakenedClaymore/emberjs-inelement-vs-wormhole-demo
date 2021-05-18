@@ -11,7 +11,7 @@ Quick Table Comparison:
 <img width="1281" alt="Screen Shot 2021-05-17 at 8 28 18 PM" src="https://user-images.githubusercontent.com/3947173/118585783-71d44180-b74e-11eb-954c-bd0fb46679f2.png">
 
 
-Checkout my article:
+Checkout my article: https://www.linkedin.com/pulse/emberjs-using-in-element-helper-faith-or
 
 In the app access: http://localhost:4200/example-links to access the examples.
 
